@@ -29,69 +29,66 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
   
-  <style>
+<style>
+    /* 1. Clear default browser margins and padding */
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Prevents any accidental horizontal scrollbar */
+    }
 
-        /* Custom Pink Text Highlight */
-::selection {
-  background-color: #FEEDF3;
-  color: #000000; /* Keeps the text a dark pink so it's readable against the light pink background */
-}
+    /* 2. Main Background */
+    body {
+      background-color: #FEEDF3;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
 
-/* Mozilla Firefox Support */
-::-moz-selection {
-  background-color: #FEEDF3;
-  color: #000000;
-}
+    /* 3. Logo Container */
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-top: 50px;
+      gap: 20px;
+    }
 
-body {
-  background-image: url('background.png');
-  background-size: cover;          /* Makes sure the image covers the whole screen */
-  background-position: center;     /* Centers the image */
-  background-repeat: no-repeat;    /* Prevents the image from tiling/repeating */
-  background-attachment: fixed;    /* Keeps the background in place when scrolling */
-}
+    .main-logo,
+    .sub-logo {
+      max-width: 450px;
+      width: 80%;
+      height: auto;
+      transform: translateX(20px);
+    }
 
-/* Stacks both images vertically in the center */
-.logo-container {
-  display: flex;
-  flex-direction: column;   /* Stacks the images on top of each other */
-  align-items: center;       /* Keeps them horizontally centered */
-  width: 100%;
-  margin-top: 50px;          /* Distance from the top of the page */
-  gap: 20px;                 /* Adjust spacing between the two images */
-}
+    /* 4. Full-bleed banner stretching edge to edge */
+    .full-banner {
+      width: 100vw;
+      max-width: 100vw;
+      height: auto;
+      display: block; /* Removes bottom gap under the image */
+      margin-top: 40px;
+      margin-left: calc(-50vw + 50%); /* Ensures it aligns strictly to edge */
+    }
 
-/* Top logo styling (nudged slightly right) */
-.main-logo {
-  max-width: 450px;
-  width: 80%;
-  height: auto;
-  transform: translateX(20px);
-}
+    /* Custom Pink Text Highlight */
+    ::selection {
+      background-color: #FEEDF3;
+      color: #000000;
+    }
 
-/* Second image styling (matching size and offset) */
-.sub-logo {
-  max-width: 450px;          /* Same width as top logo */
-  width: 80%;
-  height: auto;
-  transform: translateX(20px); /* Matches the same slight right shift */
-}
-
-    /* Full-screen banner styling */
-.full-banner {
-  width: 100vw;              /* Stretches the banner across the entire viewport width */
-  max-width: 100%;           /* Prevents horizontal overflow/scrolling bugs */
-  height: auto;              /* Keeps the image proportions correct */
-  display: block;            /* Removes any default inline gaps */
-  margin-top: 40px;
-  background: transparent
-  /* Adds space between your second logo and the banner */
-}
-    
-    </style>
-
+    ::-moz-selection {
+      background-color: #FEEDF3;
+      color: #000000;
+    }
+  </style>
+  
   <body>
-<!-- Main Logo & Sub-header Container -->
+
 <!-- Main Logo & Sub-header Container -->
 <div class="logo-container">
   <img src="princylogo2.png" alt="m r s g o s s i p Logo" class="main-logo">
