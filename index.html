@@ -76,13 +76,24 @@ body {
   height: auto;
   transform: translateX(20px); /* Matches the same slight right shift */
 }
+
+    /* Full-screen banner styling */
+.full-banner {
+  width: 100vw;              /* Stretches the banner across the entire viewport width */
+  max-width: 100%;           /* Prevents horizontal overflow/scrolling bugs */
+  height: auto;              /* Keeps the image proportions correct */
+  display: block;            /* Removes any default inline gaps */
+  margin-top: 40px;          /* Adds space between your second logo and the banner */
+}
     
     </style>
 
   <body>
 <!-- Main Logo & Sub-header Container -->
+<!-- Main Logo & Sub-header Container -->
 <div class="logo-container">
   <img src="princylogo2.png" alt="m r s g o s s i p Logo" class="main-logo">
   <img src="prettiestgina2.png" alt="Prettiest Gina" class="sub-logo">
 </div>
+<img src="banner.png" alt="Banner" class="full-banner">
   </body>
