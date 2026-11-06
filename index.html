@@ -51,28 +51,38 @@ body {
   background-attachment: fixed;    /* Keeps the background in place when scrolling */
 }
 
-    /* Centers the logo container on the page */
+/* Stacks both images vertically in the center */
 .logo-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;   /* Stacks the images on top of each other */
+  align-items: center;       /* Keeps them horizontally centered */
   width: 100%;
-  margin-top: 50px; /* Adjust spacing from the top of the screen */
+  margin-top: 50px;          /* Distance from the top of the page */
+  gap: 20px;                 /* Adjust spacing between the two images */
 }
 
-/* Logo styling and subtle right shift */
+/* Top logo styling (nudged slightly right) */
 .main-logo {
-  max-width: 450px;        /* Controls how large the logo appears */
-  width: 80%;              /* Ensures it shrinks cleanly on mobile screens */
+  max-width: 450px;
+  width: 80%;
   height: auto;
-  transform: translateX(20px); /* Nudges the logo 20px slightly to the right */
+  transform: translateX(20px);
+}
+
+/* Second image styling (matching size and offset) */
+.sub-logo {
+  max-width: 450px;          /* Same width as top logo */
+  width: 80%;
+  height: auto;
+  transform: translateX(20px); /* Matches the same slight right shift */
 }
     
     </style>
 
   <body>
-    <!-- Main Logo Container -->
+<!-- Main Logo & Sub-header Container -->
 <div class="logo-container">
   <img src="princylogo2.png" alt="m r s g o s s i p Logo" class="main-logo">
+  <img src="prettiestgina2.png" alt="Prettiest Gina" class="sub-logo">
 </div>
   </body>
