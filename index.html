@@ -51,4 +51,28 @@ body {
   background-attachment: fixed;    /* Keeps the background in place when scrolling */
 }
 
+    /* Centers the logo container on the page */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px; /* Adjust spacing from the top of the screen */
+}
+
+/* Logo styling and subtle right shift */
+.main-logo {
+  max-width: 450px;        /* Controls how large the logo appears */
+  width: 80%;              /* Ensures it shrinks cleanly on mobile screens */
+  height: auto;
+  transform: translateX(20px); /* Nudges the logo 20px slightly to the right */
+}
+    
     </style>
+
+  <body>
+    <!-- Main Logo Container -->
+<div class="logo-container">
+  <img src="princylogo2.png" alt="m r s g o s s i p Logo" class="main-logo">
+</div>
+  </body>
