@@ -1,288 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>m r s g o s s i p — The Diaries</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>m r s g o s s i p — The Diaries</title>
 
-  <!-- 🌟 LINK PREVIEWS & EMBEDS 🌟 -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="m r s g o s s i p — The Diaries">
-  <meta property="og:description" content="♡ Diaries of a ditz ♡">
-  <meta property="og:image" content="https://princyxoxo-site.vercel.app/preview-Princyxoxoxo.png">
-  <meta property="og:url" content="https://princyxoxo-site.vercel.app/">
+  <!-- 🌟 LINK PREVIEWS & EMBEDS 🌟 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="m r s g o s s i p — The Diaries">
+  <meta property="og:description" content="♡ Diaries of a ditz ♡">
+  <meta property="og:image" content="https://princyxoxo-site.vercel.app/preview-Princyxoxoxo.png">
+  <meta property="og:url" content="https://princyxoxo-site.vercel.app/">
 
-  <!-- 🐦 LARGE IMAGE CARD EMBEDS (Discord / Twitter) 🐦 -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="m r s g o s s i p — The Diaries">
-  <meta name="twitter:description" content="♡ Diaries of a ditz ♡">
-  <meta name="twitter:image" content="https://princyxoxo-site.vercel.app/preview-Princyxoxoxo.png">
-  <meta name="theme-color" content="#d23f77">
+  <!-- 🐦 LARGE IMAGE CARD EMBEDS (Discord / Twitter) 🐦 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="m r s g o s s i p — The Diaries">
+  <meta name="twitter:description" content="♡ Diaries of a ditz ♡">
+  <meta name="twitter:image" content="https://princyxoxo-site.vercel.app/preview-Princyxoxoxo.png">
+  <meta name="theme-color" content="#d23f77">
 
-  <!-- 👑 WEBSITE FAVICON ICON 👑 -->
-  <link rel="icon" type="image/png" href="crown2.png">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
-  
-  <style>
-    /* 1. Clear default browser margins and padding */
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      min-height: 100vh;
-    }
+  <!-- 👑 WEBSITE FAVICON ICON 👑 -->
+  <link rel="icon" type="image/png" href="crown2.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+  
+  <style>
+    /* 1. Clear default browser margins and padding */
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
 
-    /* 2. Main Body Background (Plain Pink below the header) */
-    body {
-      background-color: #ffffff;
-      padding-left: 24px;
-    }
+    /* 2. Main Body Background (Darker Pink) */
+    body {
+      background-color: #d23f77;
+      padding-left: 24px;
+    }
 
-    /* 3. Hero Header (Contains background image up until the banner) */
-    .hero-header {
-      background-color: #FEEDF3;
-      background-image: url('background.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 100%;
-    }
+    /* 3. Hero Header (Contains background image up until the banner) */
+    .hero-header {
+      background-color: #FEEDF3;
+      background-image: url('background.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
 
-    /* 4. Logo Container */
-    .logo-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      padding-top: 50px;
-      gap: 20px;
-    }
+    /* 4. Logo Container */
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding-top: 50px;
+      gap: 20px;
+    }
 
-    .main-logo,
-    .sub-logo {
-      max-width: 450px;
-      width: 80%;
-      height: auto;
-      transform: translateX(20px);
-    }
+    .main-logo,
+    .sub-logo {
+      max-width: 450px;
+      width: 80%;
+      height: auto;
+      transform: translateX(20px);
+    }
 
-    /* 5. Full-bleed banner stretching edge to edge */
-    .full-banner {
-      width: 100vw;
-      max-width: 100vw;
-      height: auto;
-      display: block;
-      margin-top: 40px;
-      margin-left: calc(-50vw + 50%);
-    }
+    /* 5. Full-bleed banner stretching edge to edge */
+    .full-banner {
+      width: 100vw;
+      max-width: 100vw;
+      height: auto;
+      display: block;
+      margin-top: 40px;
+      margin-left: calc(-50vw + 50%);
+    }
 
-    /* -------------------------------------------------------------
-       🏙️ SUB-HEADER (UNDER BANNER) STYLING
-    ------------------------------------------------------------- */
-    .sub-header-bar {
-      background-color: #d23f77;
-      color: #ffffff;
-      padding: 25px 40px;
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      box-sizing: border-box;
-    }
+    /* -------------------------------------------------------------
+        🏙️ SUB-HEADER (UNDER BANNER) STYLING
+    ------------------------------------------------------------- */
+    .sub-header-bar {
+      background-color: #d23f77;
+      color: #ffffff;
+      padding: 25px 40px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      box-sizing: border-box;
+    }
 
-    /* Skyline Background Overlay at bottom */
-    .sub-header-bar::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url('skyline.png');
-      background-repeat: repeat-x;
-      background-position: center bottom;
-      background-size: auto 100%;
-      opacity: 0.4;
-      pointer-events: none;
-      z-index: 1;
-    }
+    /* Skyline Background Overlay at bottom */
+    .sub-header-bar::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('skyline.png');
+      background-repeat: repeat-x;
+      background-position: center bottom;
+      background-size: auto 100%;
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 1;
+    }
 
-    .sub-header-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 3;
-    }
+    .sub-header-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 3;
+    }
 
-    .sub-header-bar h1 {
-      font-family: 'Bodoni Moda', 'Didot', 'Bodoni MT', serif;
-      font-size: 52px;
-      font-weight: 700;
-      margin: 0;
-      letter-spacing: -1.5px;
-      text-transform: lowercase;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: #ffffff;
-      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
-    }
+    .sub-header-bar h1 {
+      font-family: 'Bodoni Moda', 'Didot', 'Bodoni MT', serif;
+      font-size: 52px;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: -1.5px;
+      text-transform: lowercase;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #ffffff;
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+    }
 
-    .sub-header-kissmark {
-      height: 65px;
-      width: auto;
-      display: inline-block;
-      filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.25));
-    }
+    .sub-header-kissmark {
+      height: 65px;
+      width: auto;
+      display: inline-block;
+      filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.25));
+    }
 
-    /* Custom Pink Text Highlight */
-    ::selection {
-      background-color: #FEEDF3;
-      color: #000000;
-    }
+    /* Custom Pink Text Highlight */
+    ::selection {
+      background-color: #FEEDF3;
+      color: #000000;
+    }
 
-    ::-moz-selection {
-      background-color: #FEEDF3;
-      color: #000000;
-    }
+    ::-moz-selection {
+      background-color: #FEEDF3;
+      color: #000000;
+    }
 
-    /* -------------------------------------------------------------
-      📜 CLASSIC MAC OS IE SIDEBAR (FAR-LEFT FULL SCREEN RAIL)
-    ------------------------------------------------------------- */
-    .retro-sidebar-tabs {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 24px;
-      background-color: #f0f0f0;
-      border-right: 1px solid #000000;
-      display: flex;
-      flex-direction: column;
-      z-index: 99999;
-      box-sizing: border-box;
-    }
+    /* -------------------------------------------------------------
+      📜 CLASSIC MAC OS IE SIDEBAR (FAR-LEFT FULL SCREEN RAIL)
+    ------------------------------------------------------------- */
+    .retro-sidebar-tabs {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 24px;
+      background-color: #f0f0f0;
+      border-right: 1px solid #000000;
+      display: flex;
+      flex-direction: column;
+      z-index: 99999;
+      box-sizing: border-box;
+    }
 
-    .retro-tab {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 120px;
-      text-decoration: none;
-      position: relative;
-      transition: background-color 0.2s ease;
-      box-sizing: border-box;
-    }
+    .retro-tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 120px;
+      text-decoration: none;
+      position: relative;
+      transition: background-color 0.2s ease;
+      box-sizing: border-box;
+    }
 
-    .retro-tab:hover {
-      background-color: #e0e0e0;
-    }
+    .retro-tab:hover {
+      background-color: #e0e0e0;
+    }
 
-    .retro-tab::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: -2px;
-      width: 28px;
-      height: 1px;
-      background-color: #888888;
-      transform: rotate(25deg);
-      transform-origin: center;
-    }
+    .retro-tab::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -2px;
+      width: 28px;
+      height: 1px;
+      background-color: #888888;
+      transform: rotate(25deg);
+      transform-origin: center;
+    }
 
-    .retro-tab-text {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      font-family: 'Geneva', 'Georgia', sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      color: #111111;
-      letter-spacing: 0.5px;
-      user-select: none;
-      white-space: nowrap;
-    }
+    .retro-tab-text {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: 'Geneva', 'Georgia', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: #111111;
+      letter-spacing: 0.5px;
+      user-select: none;
+      white-space: nowrap;
+    }
 
-    /* Hide on mobile devices */
-    @media (max-width: 768px) {
-      .retro-sidebar-tabs {
-        display: none;
-      }
-      body {
-        padding-left: 0;
-      }
-      .sub-header-bar h1 {
-        font-size: 38px;
-      }
-      .sub-header-kissmark {
-        height: 45px;
-      }
-    }
-  </style>
+    /* Hide on mobile devices */
+    @media (max-width: 768px) {
+      .retro-sidebar-tabs {
+        display: none;
+      }
+      body {
+        padding-left: 0;
+      }
+      .sub-header-bar h1 {
+        font-size: 38px;
+      }
+      .sub-header-kissmark {
+        height: 45px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- 📜 RETRO SIDEBAR TABS 📜 -->
-  <div class="retro-sidebar-tabs">
-    <a href="scrapbook.html" class="retro-tab">
-      <span class="retro-tab-text">Scrapbook</span>
-    </a>
-    <a href="index.html" class="retro-tab">
-      <span class="retro-tab-text">Diary</span>
-    </a>
-    <a href="closet.html" class="retro-tab">
-      <span class="retro-tab-text">Closet</span>
-    </a>
-  </div>
+  <!-- 📜 RETRO SIDEBAR TABS 📜 -->
+  <div class="retro-sidebar-tabs">
+    <a href="scrapbook.html" class="retro-tab">
+      <span class="retro-tab-text">Scrapbook</span>
+    </a>
+    <a href="index.html" class="retro-tab">
+      <span class="retro-tab-text">Diary</span>
+    </a>
+    <a href="closet.html" class="retro-tab">
+      <span class="retro-tab-text">Closet</span>
+    </a>
+  </div>
 
-  <!-- ✨ Hero Header Section ✨ -->
-  <div class="hero-header">
-    <div class="logo-container">
-      <img src="princylogo2.png" alt="m r s g o s s i p Logo" class="main-logo">
-    </div>
-    <img src="banner.png" alt="Banner" class="full-banner">
-  </div>
+  <!-- ✨ Hero Header Section ✨ -->
+  <div class="hero-header">
+    <div class="logo-container">
+      <img src="princylogo2.png" alt="m r s g o s s i p Logo" class="main-logo">
+    </div>
+    <img src="banner.png" alt="Banner" class="full-banner">
+  </div>
 
-  <!-- 🏙️ SUB-HEADER UNDER BANNER.PNG 🏙️ -->
-  <div class="sub-header-bar">
-    <div class="sub-header-container">
-      <h1>
-        diary
-        <img src="kissmark.png" alt="kiss mark" class="sub-header-kissmark">
-      </h1>
-    </div>
-  </div>
+  <!-- 🏙️ SUB-HEADER UNDER BANNER.PNG 🏙️ -->
+  <div class="sub-header-bar">
+    <div class="sub-header-container">
+      <h1>
+        diary
+        <img src="kissmark.png" alt="kiss mark" class="sub-header-kissmark">
+      </h1>
+    </div>
+  </div>
 
-  <!-- 💖 MAIN CONTENT AREA (PASTE IT HERE) 💖 -->
-  <div class="wrapper">
-    <main style="width: 100%;">
-<article>
-<div style="max-width: 800px; margin: 40px auto; padding: 0 30px; box-sizing: border-box;">
-  <article style="background: transparent; border: none; box-shadow: none; padding: 0; text-align: center;">
-    <p style="font-size: 20px; line-height: 1.7; color: #333333; margin-bottom: 25px;">
+  <!-- 💖 MAIN CONTENT AREA WITH SEAMLESS WHITE BACKGROUND 💖 -->
+  <div style="max-width: 800px; margin: 40px auto; padding: 0 30px; box-sizing: border-box;">
+    
+    <!-- Seamless White Background Wrapper -->
+    <div style="background-color: #ffffff; padding: 40px 20px; text-align: center;">
+      
+    <p>
 Step inside my personal vault—this is my official<span style="color: #FF5997;">online diary</span>. I spill all my <span style="color: #FF5997;">late-night thoughts, secret gossip, and personal updates</span> right here + expand on all the juicy details!
-    </p>
+    </p>
 
-    <h2 style="font-family: 'Bodoni Moda', serif; font-style: italic; color: #d23f77; margin: 30px 0 15px 0; font-size: 42px; text-align: center;">
-      why?
-    </h2>
+    <h2 style="font-family: 'Bodoni Moda', serif; font-style: italic; color: #d23f77; margin: 30px 0 15px 0; font-size: 42px; text-align: center;">
+      why?
+    </h2>
 
-    <p style="font-size: 20px; line-height: 1.7; color: #333333;">
-      a private little sanctuary for my favorite <span style="color: #FF5997;">angels</span> (and anyone curious enough to read between the lines). spilling the rawest tea—and making sure no detail gets overlooked—is kind of my absolute specialty. consider this your exclusive VIP pass to my mind... if you can handle it.
-    </p>
-  </article>
-</div>
-    </main>
-  </div>
+    <p style="font-size: 20px; line-height: 1.7; color: #333333;">
+      a private little sanctuary for my favorite <span style="color: #FF5997;">angels</span> (and anyone curious enough to read between the lines). spilling the rawest tea—and making sure no detail gets overlooked—is kind of my absolute specialty. consider this your exclusive VIP pass to my mind... if you can handle it.
+    </p>
 
-</body>
 
-  <!-- Any future page contents (posts, widgets, sidebars) go below here -->
+      <!-- Moviestrip Image -->
+      <div style="margin-top: 30px; margin-bottom: 30px;">
+        <img src="moviestrip3.png" alt="Movie Strip" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+      </div>
+
+      <!-- Banner Image -->
+      <div style="margin-top: 20px;">
+        <img src="banner.png" alt="Bottom Banner" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+      </div>
+
+    </div>
+
+  </div>
 
 </body>
 </html>
