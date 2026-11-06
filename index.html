@@ -35,13 +35,13 @@
       min-height: 100vh;
     }
 
-    /* 2. Main Body Background (Plain Pink) */
+    /* 2. Main Body Background (Plain Pink below the header) */
     body {
       background-color: #d23f77;
       padding-left: 24px;
     }
 
-    /* 3. Hero Header (Contains the background image up until the banner) */
+    /* 3. Hero Header (Contains background image up until the banner) */
     .hero-header {
       background-color: #FEEDF3;
       background-image: url('background.png');
@@ -77,6 +77,67 @@
       display: block;
       margin-top: 40px;
       margin-left: calc(-50vw + 50%);
+    }
+
+    /* -------------------------------------------------------------
+       🏙️ SUB-HEADER (UNDER BANNER) STYLING
+    ------------------------------------------------------------- */
+    .sub-header-bar {
+      background-color: #d23f77;
+      color: #ffffff;
+      padding: 25px 40px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Skyline Background Overlay at bottom */
+    .sub-header-bar::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('skyline.png');
+      background-repeat: repeat-x;
+      background-position: center bottom;
+      background-size: auto 100%;
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .sub-header-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 3;
+    }
+
+    .sub-header-bar h1 {
+      font-family: 'Bodoni Moda', 'Didot', 'Bodoni MT', serif;
+      font-size: 52px;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: -1.5px;
+      text-transform: lowercase;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #ffffff;
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+    }
+
+    .sub-header-kissmark {
+      height: 65px;
+      width: auto;
+      display: inline-block;
+      filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.25));
     }
 
     /* Custom Pink Text Highlight */
@@ -155,6 +216,12 @@
       body {
         padding-left: 0;
       }
+      .sub-header-bar h1 {
+        font-size: 38px;
+      }
+      .sub-header-kissmark {
+        height: 45px;
+      }
     }
   </style>
 </head>
@@ -173,7 +240,7 @@
     </a>
   </div>
 
-  <!-- ✨ Background image only shows inside this section up to the banner ✨ -->
+  <!-- ✨ Hero Header Section ✨ -->
   <div class="hero-header">
     <div class="logo-container">
       <img src="princylogo2.png" alt="m r s g o s s i p Logo" class="main-logo">
@@ -182,7 +249,17 @@
     <img src="banner.png" alt="Banner" class="full-banner">
   </div>
 
-  <!-- Any future content you add below here will be on the plain #FEEDF3 background -->
+  <!-- 🏙️ SUB-HEADER UNDER BANNER.PNG 🏙️ -->
+  <div class="sub-header-bar">
+    <div class="sub-header-container">
+      <h1>
+        diary
+        <img src="kissmark.png" alt="kiss mark" class="sub-header-kissmark">
+      </h1>
+    </div>
+  </div>
+
+  <!-- Any future page contents (posts, widgets, sidebars) go below here -->
 
 </body>
 </html>
