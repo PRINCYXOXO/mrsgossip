@@ -35,9 +35,9 @@
       min-height: 100vh;
     }
 
-    /* 2. Main Body Background (Darker Pink) */
+    /* 2. Main Body Background (Plain Pink below header) */
     body {
-      background-color: #d23f77;
+      background-color: #ffffff;
       padding-left: 24px;
     }
 
@@ -69,12 +69,17 @@
       transform: translateX(20px);
     }
 
-    /* 5. Full-bleed banner stretching edge to edge */
-    .full-banner {
+    /* 5. Full-bleed banners and images stretching edge-to-edge */
+    .full-banner,
+    .full-bleed-img {
       width: 100vw;
       max-width: 100vw;
       height: auto;
       display: block;
+      margin-left: calc(-50vw + 50%);
+    }
+
+    .full-banner {
       margin-top: 40px;
     }
 
@@ -257,36 +262,37 @@
     </div>
   </div>
 
-  <!-- 💖 MAIN CONTENT AREA WITH SEAMLESS WHITE BACKGROUND 💖 -->
-  <div style="max-width: 800px; margin: 40px auto; padding: 0 30px; box-sizing: border-box;">
-    
-    <!-- Seamless White Background Wrapper -->
-    <div style="background-color: #ffffff; padding: 40px 20px; text-align: center;">
-      
-      <p style="font-size: 18px; line-height: 1.6; color: #333333;">  
-        Step inside my personal vault—this is my official <span style="color: #FF5997;">online diary</span>. I spill all my <span style="color: #FF5997;">late-night thoughts, secret gossip, and personal updates</span> right here + expand on all the juicy details!
-      </p>
+  <!-- 💖 MAIN CONTENT AREA (TEXT ONLY) 💖 -->
+  <div class="wrapper">
+    <main style="width: 100%;">
+      <div style="max-width: 800px; margin: 40px auto 0 auto; padding: 0 30px; box-sizing: border-box;">
+        <article style="background: transparent; border: none; box-shadow: none; padding: 0; text-align: center;">
+          
+          <p style="font-size: 20px; line-height: 1.7; color: #333333; margin-bottom: 25px;">
+            Step inside my personal vault—this is my official <span style="color: #FF5997;">online diary</span>. I spill all my <span style="color: #FF5997;">late-night thoughts, secret gossip, and personal updates</span> right here + expand on all the juicy details!
+          </p>
 
-      <h2 style="font-family: 'Bodoni Moda', serif; font-style: italic; color: #d23f77; margin: 30px 0 15px 0; font-size: 42px; text-align: center;">
-        why?
-      </h2>
+          <h2 style="font-family: 'Bodoni Moda', serif; font-style: italic; color: #d23f77; margin: 30px 0 15px 0; font-size: 42px; text-align: center;">
+            why?
+          </h2>
 
-      <p style="font-size: 20px; line-height: 1.7; color: #333333;">
-        a private little sanctuary for my favorite <span style="color: #FF5997;">angels</span> (and anyone curious enough to read between the lines). spilling the rawest tea—and making sure no detail gets overlooked—is kind of my absolute specialty. consider this your exclusive VIP pass to my mind... if you can handle it.
-      </p>
+          <p style="font-size: 20px; line-height: 1.7; color: #333333; margin-bottom: 40px;">
+            a private little sanctuary for my favorite <span style="color: #FF5997;">angels</span> (and anyone curious enough to read between the lines). spilling the rawest tea—and making sure no detail gets overlooked—is kind of my absolute specialty. consider this your exclusive VIP pass to my mind... if you can handle it.
+          </p>
 
-      <!-- Moviestrip Image -->
-      <div style="margin-top: 30px; margin-bottom: 30px;">
-        <img src="moviestrip3.png" alt="Movie Strip" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        </article>
       </div>
 
-      <!-- Banner Image -->
-      <div style="margin-top: 20px;">
-        <img src="banner.png" alt="Bottom Banner" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+      <!-- 🎬 FULL-BLEED MOVIE STRIP 🎬 -->
+      <div style="margin-top: 40px; margin-bottom: 30px; overflow: hidden;">
+        <img src="moviestrip3.png" alt="Movie Strip" class="full-bleed-img">
       </div>
 
-    </div>
-
+      <!-- ✨ FULL-BLEED BOTTOM BANNER ✨ -->
+      <div style="overflow: hidden;">
+        <img src="banner.png" alt="Bottom Banner" class="full-bleed-img">
+      </div>
+    </main>
   </div>
 
 </body>
