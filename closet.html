@@ -69,14 +69,18 @@
       transform: translateX(20px);
     }
 
-    /* 5. Full-bleed banner stretching edge to edge */
-    .full-banner {
+    /* 5. Full-bleed images stretching edge to edge */
+    .full-banner,
+    .full-bleed-img {
       width: 100vw;
       max-width: 100vw;
       height: auto;
       display: block;
-      margin-top: 40px;
       margin-left: calc(-50vw + 50%);
+    }
+
+    .full-banner {
+      margin-top: 40px;
     }
 
     /* -------------------------------------------------------------
@@ -258,10 +262,10 @@
     </div>
   </div>
 
-  <!-- 💖 MAIN CONTENT AREA 💖 -->
+  <!-- 💖 MAIN CONTENT AREA (TEXT ONLY) 💖 -->
   <div class="wrapper">
     <main style="width: 100%;">
-      <div style="max-width: 800px; margin: 40px auto; padding: 0 30px; box-sizing: border-box;">
+      <div style="max-width: 800px; margin: 40px auto 0 auto; padding: 0 30px; box-sizing: border-box;">
         <article style="background: transparent; border: none; box-shadow: none; padding: 0; text-align: center;">
           
           <p style="font-size: 20px; line-height: 1.7; color: #333333; margin-bottom: 25px;">
@@ -272,21 +276,21 @@
             why?
           </h2>
 
-          <p style="font-size: 20px; line-height: 1.7; color: #333333;">
+          <p style="font-size: 20px; line-height: 1.7; color: #333333; margin-bottom: 40px;">
             a curated style guide for true visionaries, style purists, and actual <span style="color: #FF5997;">it-girls</span> (or anyone desperately trying to upgrade their aesthetic). dressing up and setting the bar is what I do best. if you're looking for genuine outfit inspiration for tonight's main event, you've finally come to the right place. 
           </p>
 
-          <!-- Moviestrip Image (Change the number here if this page needs a different one, e.g. moviestrip3.png) -->
-          <div style="margin-top: 30px; margin-bottom: 30px;">
-            <img src="moviestrip3.png" alt="Movie Strip" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-          </div>
-
-          <!-- Bottom Banner Image -->
-          <div style="margin-top: 20px;">
-            <img src="banner.png" alt="Bottom Banner" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-          </div>
-
         </article>
+      </div>
+
+      <!-- 🎬 FULL-BLEED MOVIE STRIP 🎬 -->
+      <div style="margin-top: 40px; margin-bottom: 30px; overflow: hidden;">
+        <img src="moviestrip3.png" alt="Movie Strip" class="full-bleed-img">
+      </div>
+
+      <!-- ✨ FULL-BLEED BOTTOM BANNER ✨ -->
+      <div style="overflow: hidden;">
+        <img src="banner.png" alt="Bottom Banner" class="full-bleed-img">
       </div>
     </main>
   </div>
