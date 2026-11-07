@@ -262,13 +262,15 @@
     </div>
   </div>
 
-  <!-- 💖 MAIN CONTENT AREA (FULL-SCREEN WHITE SECTION) 💖 -->
+  <!-- 💖 MAIN CONTENT AREA (CONTINUOUS WHITE SECTION) 💖 -->
   <div class="wrapper">
     <main style="width: 100%;">
       
-      <!-- Full-bleed white container stretching edge-to-edge -->
-      <div style="width: 100vw; max-width: 100vw; margin-top: 40px; margin-bottom: 40px; padding: 60px 20px; background-color: #ffffff; box-sizing: border-box; margin-left: calc(-50vw + 50%);">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <!-- Full-bleed white container touching header and holding both text + movie strip -->
+      <div style="width: 100vw; max-width: 100vw; margin-top: 0; padding-top: 60px; padding-bottom: 30px; background-color: #ffffff; box-sizing: border-box; margin-left: calc(-50vw + 50%);">
+        
+        <!-- Text Content Centered -->
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 30px; text-align: center; box-sizing: border-box;">
           <article style="background: transparent; border: none; box-shadow: none; padding: 0;">
             
             <p style="font-size: 20px; line-height: 1.7; color: #333333; margin-bottom: 25px;">
@@ -285,11 +287,12 @@
 
           </article>
         </div>
-      </div>
 
-      <!-- 🎬 FULL-BLEED MOVIE STRIP (moviestrip1.png) 🎬 -->
-      <div style="margin-bottom: 30px; overflow: hidden;">
-        <img src="moviestrip1.png" alt="Movie Strip" class="full-bleed-img">
+        <!-- 🎬 MOVIE STRIP (moviestrip1.png) - Inside the white background box 🎬 -->
+        <div style="margin-top: 50px; margin-bottom: 0; width: 100vw; max-width: 100vw; overflow: hidden;">
+          <img src="moviestrip1.png" alt="Movie Strip" style="width: 100vw; max-width: 100vw; height: auto; display: block;">
+        </div>
+
       </div>
 
       <!-- ✨ FULL-BLEED BOTTOM BANNER ✨ -->
