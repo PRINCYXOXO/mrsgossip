@@ -344,46 +344,57 @@
       margin-top: 15px;
     }
 
-        /* 🍏 DESKTOP MAC-STYLE TOP MENU BAR */
+   /* 🍏 DESKTOP MAC-STYLE TOP MENU BAR */
     .mac-desktop-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: #FEEDF3; /* Light Pink */
-      border-bottom: 2px solid #d23f77; /* Dark Pink Trim */
+      background-color: #ff509e; /* Your new background pink color */
+      border-bottom: none; /* Removed the default dark pink trim outline */
+      filter: drop-shadow(0px 3px 5px rgba(210, 63, 119, 0.5)); /* Darker pink drop shadow */
       height: 30px;
       width: 100%;
       position: fixed;
       top: 0;
       left: 0;
-      /* Padded left so content begins safely to the right of your 24px sidebar rail */
       padding: 0 20px 0 44px; 
       box-sizing: border-box;
       user-select: none;
-      pointer-events: none; /* Entirely unclickable */
-      z-index: 9999; /* Sits directly beneath your sidebar tabs rail z-index */
+      pointer-events: none;
+      z-index: 9999;
     }
 
+
+    /* Ensures all text elements and glyphs inside the bar turn white */
+    .mac-desktop-bar,
+    .mac-logo-glyph,
+    .mac-menu-title,
+    .mac-menu-right span {
+      color: #ffffff !important;
+    }
     .mac-menu-left {
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
+
     /* Small decorative layout glyph */
     .mac-logo-glyph {
       font-size: 16px;
-      color: #d23f77;
       font-weight: bold;
+      color: #ffffff; /* Changed to White */
     }
+
 
     .mac-menu-title {
       font-family: 'Bodoni Moda', 'Didot', serif;
       font-size: 15px;
       font-weight: 700;
-      color: #d23f77;
       text-transform: lowercase;
+      color: #ffffff; /* Changed to White */
     }
+
 
     .mac-menu-right {
       display: flex;
@@ -392,14 +403,16 @@
       font-family: 'Geneva', sans-serif;
       font-size: 11px;
       font-weight: 600;
-      color: #d23f77;
       letter-spacing: 0.5px;
+      color: #ffffff; /* Changed to White */
     }
+
 
     /* Adjust main body to account for fixed desktop bar placement height */
     body {
       padding-top: 30px;
     }
+
 
     /* Hide this bar completely on mobile phone viewports */
     @media (max-width: 768px) {
