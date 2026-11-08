@@ -411,6 +411,40 @@
       }
     }
 
+        /* 💖 CUSTOM MOUSE CURSOR TRAIL STYLE 💖 */
+    body {
+      /* Replaces default pointer with crown2.png */
+      cursor: url('crown2.png'), auto;
+    }
+
+    /* Make sure all links and clickable items use the heart pointer icon */
+    a, button, [role="button"], input[type="submit"] {
+      cursor: url('heart.png'), pointer;
+    }
+
+    /* 🎀 PINK SYMBOL CURSOR TRAIL SPARKLES 🎀 */
+    .cursor-sparkle {
+      position: fixed;
+      pointer-events: none;
+      z-index: 999999;
+      font-size: 14px;
+      color: #ff69b4; /* Pink text sparkle glyphs */
+      text-shadow: 0 0 4px rgba(210, 63, 119, 0.6); /* Soft pink outer glow */
+      user-select: none;
+      animation: sparkleFade 1s linear forwards;
+    }
+
+    @keyframes sparkleFade {
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(0deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(var(--dx), var(--dy)) scale(0.3) rotate(180deg);
+      }
+    }
+
     
   </style>
 </head>
@@ -530,5 +564,49 @@
     </main>
   </div>
 
+    <!-- 💖 PINK SYMBOLS TRAIL ENGINE SCRIPT 💖 -->
+  <script>
+    const trailSymbols = ['✦', '✧', '♡', '₊˚⊹', '⊹ ࣪ ', ' ˖ ˚', '౨ৎ'];
+    let lastX = 0;
+    let lastY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      // Only spawn a trail element if the mouse has drifted at least 15px
+      const distance = Math.hypot(e.clientX - lastX, e.clientY - lastY);
+      if (distance < 15) return;
+
+      lastX = e.clientX;
+      lastY = e.clientY;
+
+      const sparkle = document.createElement('span');
+      sparkle.className = 'cursor-sparkle';
+      
+      // Randomly select a text icon decoration from your collection array list
+      sparkle.textContent = trailSymbols[Math.floor(Math.random() * trailSymbols.length)];
+      
+      // Mount at current viewport coordinate offset points
+      sparkle.style.left = `${e.clientX}px`;
+      sparkle.style.top = `${e.clientY}px`;
+
+      // Assign floating physics motion parameters
+      const dx = (Math.random() - 0.5) * 40;
+      const dy = Math.random() * 50 + 20;
+      sparkle.style.setProperty('--dx', `${dx}px`);
+      sparkle.style.setProperty('--dy', `${dy}px`);
+
+      // Vary the font sizes dynamically
+      const size = Math.floor(Math.random() * 10) + 12;
+      sparkle.style.fontSize = `${size}px`;
+
+      document.body.appendChild(sparkle);
+
+      // Clean up item from DOM nodes once transparency finishes fading out
+      setTimeout(() => {
+        sparkle.remove();
+      }, 1000);
+    });
+  </script>
+
+  
 </body>
 </html>
