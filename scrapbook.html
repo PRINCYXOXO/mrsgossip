@@ -542,12 +542,36 @@ a, button, [role="button"], input[type="submit"] {
       left: -70px;
     }
 
-    .lightbox-next {
+       .lightbox-next {
       right: -70px;
     }
 
+    /* 👇 PASTE THE NEW RULES DIRECTLY HERE 👇 */
+    /* --- NEW GRID GALLERY FOR THE FEEDZONE --- */
+    .feed-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+      justify-content: start;
+    }
+
+    .feed-gallery .gallery-item {
+      display: block;
+      width: 100%;
+    }
+
+    .feed-gallery .gallery-item img {
+      width: 100%;
+      height: 180px; 
+      object-fit: cover; 
+      border: none; 
+      border-radius: 8px; 
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    }
     
-  </style>
+  </style> <!-- This is line 277 in your file -->
+
 </head>
 <body>
 
@@ -643,19 +667,28 @@ a, button, [role="button"], input[type="submit"] {
           </div>
 
           <section id="blastFeed">
-            <!-- first POST CARD -->
+          <!-- first POST CARD -->
 <article>
-  <h2>Welcome to the Couture</h2>
-  <div class="file-under">Filed under: Live Feed > Archives > Gossip • 5.11.26</div>
-  <p>Pretty clothing for the prettiest people! On wednesdays, we wear pink. And guess what day it is today? A wednesday! I heard whoever tries to talk to S today who isn't wearing pink, is recieving a kick to the balls. She's feisty.</p>
+  <h2>scrapbook</h2>
+  <div class="file-under">Filed under: Live Feed > Archives > Scrapbook • 5.11.26</div>
+  <p>the cutest album for the cutest people!</p>
   
-  <!-- 📷 LIGHTBOX CLICKABLE IMAGE BLOCK 📷 -->
-<a href="outfitdump.jpg" class="gallery-item">
-  <img src="outfitdump.jpg" alt="Post Photo" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 15px auto; border: 3px solid #ff509e; border-radius: 0px;">
-</a>
+  <!-- 📷 NEW GRID ARRANGEMENT - STARTING FROM THE LEFT 📷 -->
+  <div class="feed-gallery">
+    <a href="outfitdump.jpg" class="gallery-item">
+      <img src="outfitdump.jpg" alt="Post Photo">
+    </a>
+    <!-- Simply paste more images below like this whenever you want to add them! -->
+    <!--
+    <a href="outfit2.jpg" class="gallery-item">
+      <img src="outfit2.jpg" alt="Post Photo 2">
+    </a>
+    -->
+  </div>
 
-              <span class="signature">xoxo, PRINCYXOXO</span>
-            </article>
+  <span class="signature">xoxo, PRINCYXOXO</span>
+</article>
+
           </section>
         </main>
       </div>
