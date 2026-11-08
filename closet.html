@@ -706,14 +706,23 @@ a, button, [role="button"], input[type="submit"] {
   </script>
 
       
-    </main>
+     </main>
   </div>
 
-
+  <!-- 🔍 LIGHTBOX HTML CONTAINER 🔍 -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content-wrapper">
+      <button class="lightbox-prev" id="lightboxPrev">&#8249;</button>
+      <img class="lightbox-content" id="lightboxImg" alt="Enlarged view">
+      <button class="lightbox-next" id="lightboxNext">&#8250;</button>
+      <button class="lightbox-close" id="closeLightbox">×</button>
+    </div>
+  </div>
 
   <!-- 📸 LIGHTBOX CONTROLLER SCRIPT 📸 -->
   <script>
     const galleryLinks = document.querySelectorAll('.gallery-item');
+
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const closeBtn = document.getElementById('closeLightbox');
