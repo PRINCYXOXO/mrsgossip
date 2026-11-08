@@ -212,14 +212,51 @@
       white-space: nowrap;
     }
 
-    /* Hide on mobile devices */
+    /* Mobile adjustments: Move sidebar to a top navigation bar */
     @media (max-width: 768px) {
-      .retro-sidebar-tabs {
-        display: none;
-      }
       body {
+        /* Add top padding to prevent the fixed navbar from overlapping your logo */
+        padding-top: 40px; 
         padding-left: 0;
       }
+
+      /* Turn the full-screen vertical rail into a top horizontal bar */
+      .retro-sidebar-tabs {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 40px;
+        flex-direction: row; /* Aligns tabs side-by-side horizontally */
+        border-right: none;
+        border-bottom: 1px solid #000000;
+      }
+
+      /* Style individual tabs to fit evenly side-by-side */
+      .retro-tab {
+        flex: 1; /* Automatically splits the width evenly between your 3 links */
+        height: 100%;
+      }
+
+      /* Clean up the rotated slash background effects for horizontal layout */
+      .retro-tab::after {
+        top: 0;
+        bottom: 0;
+        left: auto;
+        right: 0;
+        width: 1px;
+        height: 100%;
+        background-color: #888888;
+        transform: none; /* Removes the 25deg diagonal tilt for a cleaner top bar */
+      }
+
+      /* Remove rotation so text reads horizontally normally */
+      .retro-tab-text {
+        writing-mode: horizontal-tb;
+        transform: none;
+      }
+
       .sub-header-bar h1 {
         font-size: 38px;
       }
@@ -227,6 +264,7 @@
         height: 45px;
       }
     }
+
 
         /* 👑 PRINCYXOXO FEED BOX STYLING 👑 */
     .feed-box-container {
