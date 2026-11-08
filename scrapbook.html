@@ -586,6 +586,18 @@ a, button, [role="button"], input[type="submit"] {
         height: auto;
         background: transparent; 
     }
+
+        /* Style for the new clickable link in the top bar */
+    .mac-bar-link {
+      color: #ffffff !important;
+      text-decoration: none;
+      pointer-events: auto; /* Overrides pointer-events: none from the parent bar */
+    }
+
+    .mac-bar-link:hover {
+      text-decoration: underline; /* Optional: adds a subtle underline on hover */
+    }
+
     
   </style> 
 
@@ -596,14 +608,16 @@ a, button, [role="button"], input[type="submit"] {
   <div class="mac-desktop-bar">
     <div class="mac-menu-left">
       <span class="mac-logo-glyph">✦</span>
-      <span class="mac-menu-title">scrapbook</span>
+      <span class="mac-menu-title">diary</span>
     </div>
     <div class="mac-menu-right">
+      <a href="https://princyxoxo-site.vercel.app/" class="mac-bar-link">main</a>
       <span>100%</span>
       <span>sys.ok</span>
       <span>⌕</span>
     </div>
   </div>
+
 
   
   <!-- 📜 RETRO SIDEBAR TABS 📜 -->
