@@ -344,9 +344,91 @@
       margin-top: 15px;
     }
 
+        /* 🍏 DESKTOP MAC-STYLE TOP MENU BAR */
+    .mac-desktop-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #FEEDF3; /* Light Pink */
+      border-bottom: 2px solid #d23f77; /* Dark Pink Trim */
+      height: 30px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* Padded left so content begins safely to the right of your 24px sidebar rail */
+      padding: 0 20px 0 44px; 
+      box-sizing: border-box;
+      user-select: none;
+      pointer-events: none; /* Entirely unclickable */
+      z-index: 9999; /* Sits directly beneath your sidebar tabs rail z-index */
+    }
+
+    .mac-menu-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Small decorative layout glyph */
+    .mac-logo-glyph {
+      font-size: 16px;
+      color: #d23f77;
+      font-weight: bold;
+    }
+
+    .mac-menu-title {
+      font-family: 'Bodoni Moda', 'Didot', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #d23f77;
+      text-transform: lowercase;
+    }
+
+    .mac-menu-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-family: 'Geneva', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: #d23f77;
+      letter-spacing: 0.5px;
+    }
+
+    /* Adjust main body to account for fixed desktop bar placement height */
+    body {
+      padding-top: 30px;
+    }
+
+    /* Hide this bar completely on mobile phone viewports */
+    @media (max-width: 768px) {
+      .mac-desktop-bar {
+        display: none !important;
+      }
+      body {
+        padding-top: 40px !important; /* Retains your mobile top bar clearance */
+      }
+    }
+
+    
   </style>
 </head>
 <body>
+
+    <!-- 🍏 PC-ONLY RETRO DESKTOP HEADER BAR -->
+  <div class="mac-desktop-bar">
+    <div class="mac-menu-left">
+      <span class="mac-logo-glyph">✦</span>
+      <span class="mac-menu-title">diary</span>
+    </div>
+    <div class="mac-menu-right">
+      <span>100%</span>
+      <span>sys.ok</span>
+      <span>⌕</span>
+    </div>
+  </div>
+
 
   <!-- 📜 RETRO SIDEBAR TABS 📜 -->
   <div class="retro-sidebar-tabs">
